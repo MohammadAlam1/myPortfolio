@@ -14,7 +14,7 @@ export default function Home() {
         </div>
         <h1 className="title">
           Building digital <br />
-          <span className="gradient">experiences</span>that matter
+          <span className="gradient">experiences</span> that matter
         </h1>
         <p className="subtitle">
           Full stack developer crafting clean, performant web applications with
@@ -22,16 +22,16 @@ export default function Home() {
           architecture.
         </p>
         <div className="buttons">
-          <a href="#projects" className="btn primary">
+          <a href="#projects" className="btnPrimary">
             View Projects
           </a>
-          <a href="#contact" className="btn secondary">
+          <a href="#contact" className="btnSecondary">
             Get In Touch
           </a>
         </div>
       </div>
       <div
-        className="scrollIndicator"
+        className="scroll-Indicator"
         onClick={() =>
           document
             .getElementById("about")
@@ -39,7 +39,7 @@ export default function Home() {
         }
       >
         <span>Scroll</span>
-        <span>↓</span>
+        <span className="arrow">↓</span>
       </div>
     </section>
   );
