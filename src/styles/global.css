@@ -100,13 +100,13 @@ body {
 }
 
 /* Animation helper */
-.animate-on-scroll {
+/* .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
   transition:
     opacity 0.6s ease,
     transform 0.6s ease;
-}
+} */
 
 @media (max-width: 900px) {
   .section-title {
