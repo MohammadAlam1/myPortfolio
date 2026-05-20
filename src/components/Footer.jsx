@@ -5,20 +5,23 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="social-links">
-          <a href="#" title="GitHub">
+          <a href="https://github.com/MohammadAlam1" title="GitHub">
             <img
               src="https://img.icons8.com/?size=96&id=20906&format=png"
               alt="GitHub-Img"
             />
           </a>
-          <a href="#" title="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/mohammad-alam-ansari-311120174?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            title="LinkedIn"
+          >
             <img
               src="https://img.icons8.com/?size=96&id=xuvGCOXi8Wyg&format=png"
               alt="LinkedIn-Img"
             />
           </a>
 
-          <a href="#" title="Email">
+          <a href="mailto:mohammadalamansari00@gmail.com" title="Email">
             <img
               src="https://img.icons8.com/?size=96&id=X0mEIh0RyDdL&format=png"
               alt="Email-Img"

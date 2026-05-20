@@ -1,20 +1,20 @@
 // step1 navbar.jsx create karna hai and uska Css file banana hai
 
 import { useState, useEffect } from "react";
-// import MobileMenu from "./MobileMenu";
-// import styles from "../styles/Navbar.css";
+import MobileMenu from "./MobileMenu";
+
 import "../styles/Navbar.css";
 //
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  //   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  //   const closeMobile = () => setMobileOpen(false);
+  const closeMobile = () => setMobileOpen(false);
 
   return (
     <>
@@ -42,13 +42,13 @@ export default function Navbar() {
           <button
             className="mobileBtn"
             onClick={() => setMobileOpen(true)}
-            aria-label="Open menu"
+            aria-label="open menu"
           >
             ☰
           </button>
         </div>
       </nav>
-      {/* <MobileMenu isOpen={mobileOpen} onClose={closeMobile} /> */}
+      <MobileMenu isOpen={mobileOpen} onClose={closeMobile} />
     </>
   );
 }

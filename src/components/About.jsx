@@ -1,4 +1,5 @@
 import "../styles/About.css";
+import myAvatar from "../assets/Photo.jpg";
 
 export default function About() {
   return (
@@ -13,11 +14,7 @@ export default function About() {
         <div className="imageWrapper">
           <div className="glow"></div>
           <div className="image">
-            <img
-              src="./src/assets/avatar.jpg"
-              alt="My Avatar"
-              className="avatar"
-            />
+            <img src={myAvatar} alt="My Avatar" className="avatar" />
           </div>
         </div>
 
