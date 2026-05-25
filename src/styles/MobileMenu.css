@@ -11,7 +11,9 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding: 5rem 1rem 2rem;
   backdrop-filter: blur(20px);
+  overflow-y: auto;
 }
 .menu.active {
   display: flex;
@@ -21,7 +23,6 @@
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 600;
-  letter-spacing: -0.3px;
 }
 .menu a:hover {
   color: var(--accent-light);
@@ -35,4 +36,20 @@
   color: var(--text-primary);
   font-size: 2rem;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    gap: 1.4rem;
+  }
+
+  .menu a {
+    font-size: 1.1rem;
+  }
+
+  .closeBtn {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.7rem;
+  }
 }

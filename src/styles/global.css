@@ -10,10 +10,12 @@
   --accent-glow: rgba(108, 92, 231, 0.25);
   --border: #1e1e2e;
   --border-light: #2a2a3a;
-  --gradient-1: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  --gradient-1: linear-gradient(150deg, #371fe7c5 0%, #e7e7e7f6 100%);
+
   --gradient-2: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
   --gradient-3: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);
   --gradient-4: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 50px rgba(0, 0, 0, 0.5);
@@ -42,6 +44,7 @@ body {
     BlinkMacSystemFont,
     sans-serif;
   background-color: var(--bg-primary);
+
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -67,7 +70,8 @@ body {
 
 /* Common section classes */
 .section {
-  padding: 6rem 2rem;
+  width: 100%;
+  padding: 6rem clamp(1rem, 4vw, 2rem);
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -85,15 +89,14 @@ body {
   margin-bottom: 0.8rem;
 }
 .section-title {
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 800;
-  letter-spacing: -1px;
   margin-bottom: 0.8rem;
   line-height: 1.15;
 }
 .section-line {
-  width: 50px;
-  height: 4px;
+  width: min(300px, 70vw);
+  height: 3px;
   background: var(--gradient-1);
   border-radius: 2px;
   margin: 0 auto;
@@ -109,10 +112,22 @@ body {
 } */
 
 @media (max-width: 900px) {
-  .section-title {
-    font-size: 2.2rem;
-  }
   .section {
     padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3.25rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    letter-spacing: 1.2px;
   }
 }

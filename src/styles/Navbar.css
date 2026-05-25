@@ -29,6 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .logo {
@@ -112,10 +113,33 @@
 }
 
 @media (max-width: 900px) {
+  .navbar,
+  .scroll-navbar {
+    padding-inline: 1.25rem;
+  }
+
   .navLinks {
     display: none;
   }
+
   .mobileBtn {
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar,
+  .scroll-navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .mobileBtn {
+    font-size: 1.35rem;
+    padding: 0.35rem;
   }
 }

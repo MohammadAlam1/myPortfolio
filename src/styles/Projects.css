@@ -1,98 +1,6 @@
-/* .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: var(--transition);
-  cursor: pointer;
-  padding: 0 10px;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--border-light);
-  box-shadow: var(--shadow-lg);
-}
-
-.project-image {
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  position: relative;
-  overflow: hidden;
-  object-fit: cover;
-  display: block;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.project-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.3px;
-}
-
-.project-description {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-}
-
-.project-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.project-tool {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 50px;
-  background: rgba(108, 92, 231, 0.1);
-  color: var(--accent-light);
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.2rem;
-}
-
-.project-link {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.project-link:hover {
-  color: var(--accent-light);
-} */
-
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -102,7 +10,6 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: var(--transition);
-  /* no padding on card itself */
 }
 
 .project-card:hover {
@@ -113,28 +20,12 @@
 
 .project-image {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
   display: block;
 }
 
-/* If you keep a wrapper div around the image, use this instead:
-.project-image-wrapper {
-  height: 220px;
-  overflow: hidden;
-}
-.project-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.project-card:hover .project-image-wrapper img {
-  transform: scale(1.05);
-}
-*/
-
-/* Content area – add this div in your React component */
 .project-content {
   padding: 1.2rem;
 }
@@ -142,22 +33,21 @@
 .project-title {
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.3px;
+  margin: 1.2rem 1.2rem 0.5rem;
 }
 
 .project-description {
   color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.6;
-  margin-bottom: 1.2rem;
+  margin: 0 1.2rem 1.2rem;
 }
 
 .project-tools {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.2rem;
+  margin: 0 1.2rem 1.2rem;
 }
 
 .project-tool {
@@ -172,10 +62,13 @@
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  margin: 0 1.2rem 1.2rem;
 }
 
-.project-link {
+.project-link,
+.Project-link {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.85rem;
@@ -186,6 +79,29 @@
   gap: 0.3rem;
 }
 
-.project-link:hover {
+.project-link:hover,
+.Project-link:hover {
   color: var(--accent-light);
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    gap: 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+    margin-inline: 1rem;
+  }
+
+  .project-description,
+  .project-tools,
+  .project-links {
+    margin-inline: 1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
 }
