@@ -46,8 +46,8 @@ export default function Footer() {
           </li>
         </ul>
         <p className="copy-right">
-          &copy; {new Date().getFullYear()} Mohammad Alam Ansari. Built with
-          love using Vite + React. All rights reserved.
+          &copy; 2026-{new Date().getFullYear()} Mohammad Alam Ansari. Built
+          with love using Vite + React. All rights reserved.
         </p>
       </div>
     </footer>
